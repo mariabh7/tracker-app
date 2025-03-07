@@ -6,3 +6,7 @@
 body {
   @apply font-interTight;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
