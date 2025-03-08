@@ -17,8 +17,12 @@ module.exports = {
         sweetOrange: '#F93939',
         cherryMn: '#ED1865',
         whisteriaMn: '#6B19F1',
-        neutralGrey: '#F8FAFC',
+        neutralGrey1: '#F8FAFC',
+        lightGrey: '#E3E8EF',
         violetSn: '#191A38',
+        violet200: '#F7F8FD',
+        neutralBlack: '#344055',
+        coolGrey: '#79808A',
       }
     },
   },
