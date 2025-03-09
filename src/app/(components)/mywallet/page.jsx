@@ -87,8 +87,8 @@ export default function Mywallet() {
     }
   };
   return (
-    <div className=" md:w-[75%] h-lvh overflow-y-auto ">
-      <div className=" md:px-4  md:py-14">
+    <div className=" md:w-[100%] h-lvh overflow-y-auto ">
+      <div className=" md:px-6  md:py-14">
         <div className=" pt-24 px-4 md:p-0">
           {/* my wallet head - title */}
           <header className="mt-10 md:mt-0">
