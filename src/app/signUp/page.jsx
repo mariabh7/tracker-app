@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Eye, EyeOff, ArrowRight } from "lucide-react"; 
-import workFromHomeImage from "/public/images/Work from home.png";
+import workFromHomeImage from "/public/images/image.png";
 import unionLogo from "/public/icons/union.png";
 
 import "@fontsource/inter-tight";
