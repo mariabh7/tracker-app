@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
+
 import { usePathname, useRouter } from "next/navigation";
-
 import { useState, useEffect } from "react";
-
 import union from "/./public/icons/union.png";
 import hamburgermenu from "/./public/icons/icon button.png";
 import chatIcon from "/./public/icons/chat.png";
@@ -13,7 +12,7 @@ export default function Menu() {
   const router = useRouter();
   const [activePage, setActivePage] = useState("");
   const pathname = usePathname();
-  // Update active page on route change
+  // Update active page on router change
   useEffect(() => {
     setActivePage(router.pathname);
   }, [router.pathname]);
@@ -26,7 +25,7 @@ export default function Menu() {
   ];
 
   return (
-    <div className="relative font-medium bg-baseBlack p-8 h-lvh w-[23%] overflow-y-auto ">
+    <div className="hidden md:block font-medium bg-baseBlack p-8 md:h-lvh md:w-[28%] overflow-y-auto ">
       {/* Header */}
       <header className="flex justify-between">
         <div className="logo flex gap-2 items-center">
@@ -55,7 +54,7 @@ export default function Menu() {
           </li>
         ))}
       </ul>
-      <div className="mt-96 ">
+      <div className=" mt-20 md:mt-96 ">
         <div className="settings mt-10 pl-4 pb-5 flex justify-start gap-2 w-full border-b-2 border-neutral-400 ">
           <Image src={settIcon} alt="Settings Icon" width={30} height={30} />
           <a
