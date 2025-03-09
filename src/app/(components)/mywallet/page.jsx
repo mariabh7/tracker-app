@@ -170,9 +170,8 @@ export default function Mywallet() {
                 </div>
                 <div className="  mt-2 md:mt-4  w-full border-2 border-lightGrey  rounded-full h-3 md:h-4">
                   <div
-                    className={`bg-violetMain rounded-full w-[${
-                      (item.income * 100) / item.total
-                    }%] h-2 md:h-3`}
+                    className="bg-violetMain rounded-full h-2 md:h-3"
+                    style={{ width: `${(item.income * 100) / item.total}%` }}
                   ></div>
                 </div>
               </div>
