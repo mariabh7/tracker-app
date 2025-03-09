@@ -15,7 +15,7 @@ export default function Register() {
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
       
-      {/* ✅ Top Section (Mobile Only) */}
+      {/* Top Section (Mobile Only) */}
       <div className="md:hidden bg-[#0D0D26] flex items-center justify-start py-4  rounded-b-3xl  pl-16 h-32 mb-10">
         <div className="flex items-center gap-2">
           <Image src={unionLogo} width={30} height={30} alt="Tracker Logo" />
@@ -23,7 +23,7 @@ export default function Register() {
         </div>
       </div>
 
-      {/* ✅ Left Section (Desktop Only) */}
+      {/* Left Section (Desktop Only) */}
       <div className="hidden md:flex w-2/5 bg-[#0D0D26] relative items-center justify-center">
         <div className="absolute top-10 left-10 flex items-center gap-2">
           <Image src={unionLogo} width={24} height={24} alt="Tracker Logo" />
@@ -40,7 +40,7 @@ export default function Register() {
         </div>
       </div>
 
-      {/* ✅ Right Section - Form */}
+      {/*  Right Section - Form */}
       <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-16">
         <h2 className="text-3xl font-semibold mb-2 text-gray-900">Create account.</h2>
         <p className="text-gray-500 mb-6">
@@ -55,7 +55,7 @@ export default function Register() {
         </div>
         <input type="email" placeholder="Email address" className="input-field mt-4" />
 
-        {/* ✅ Password Field */}
+        {/*  Password Field */}
         <div className="relative mt-4">
           <input
             type={showPassword ? "text" : "password"}
@@ -71,7 +71,7 @@ export default function Register() {
           </button>
         </div>
 
-        {/* ✅ Confirm Password Field */}
+        {/*  Confirm Password Field */}
         <div className="relative mt-4">
           <input
             type={showConfirmPassword ? "text" : "password"}
@@ -87,7 +87,7 @@ export default function Register() {
           </button>
         </div>
 
-        {/* ✅ Terms Checkbox */}
+        {/*  Terms Checkbox */}
         <div className="flex items-center mt-4">
           <input type="checkbox" className="mr-2" />
           <p className="text-gray-500 text-sm">
@@ -96,7 +96,7 @@ export default function Register() {
           </p>
         </div>
 
-        {/* ✅ Create Account Button */}
+        {/*  Create Account Button */}
         <a href="/mywallet" className="w-full mt-6 bg-[#0A65CC] text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-800">
           Create Account <ArrowRight size={20} />
         </a>
