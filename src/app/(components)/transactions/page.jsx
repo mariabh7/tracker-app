@@ -20,7 +20,7 @@ export default function Transactions() {
   const currentItems = transactions.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <div className="flex w-full h-full">
+    <div className="flex w-[100%] md:h-lvh overflow-y-auto">
       <div className="flex-1 p-6 bg-gray-50 w-full">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">Recent Transactions</h1>
