@@ -17,7 +17,7 @@ export default function MainpagesLayout({ children }) {
   }, []);
   return (
     <div
-      className=" md:flex md:gap-4"
+      className=" md:flex "
     > {isMobile ? <Mobilemenu></Mobilemenu> : <Menu></Menu>}
       {children}
     </div>
