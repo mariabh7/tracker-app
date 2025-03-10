@@ -5,13 +5,14 @@ import Image from "next/image";
 import { Eye, EyeOff, ArrowRight } from "lucide-react"; 
 import workFromHomeImage from "/public/images/image.png";
 import unionLogo from "/public/icons/union.png";
-
-import "@fontsource/inter-tight";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+/*import "@fontsource/inter-tight";*/
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
+  const router = useRouter();
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
       
@@ -45,7 +46,12 @@ export default function Register() {
         <h2 className="text-3xl font-semibold mb-2 text-gray-900">Create account.</h2>
         <p className="text-gray-500 mb-6">
           Already have an account?{" "}
-          <a href="#" className="text-[#0A65CC] hover:underline">Log In</a>
+          <button 
+            onClick={() => router.push("/signin")} // ✅ Redirige vers /signin
+            className="text-[#0A65CC] hover:underline"
+          >
+            Log In
+          </button>
         </p>
 
         {/* Form Fields */}
