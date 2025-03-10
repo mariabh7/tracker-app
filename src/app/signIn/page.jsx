@@ -12,7 +12,6 @@ export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ email, password, rememberMe });
@@ -47,9 +46,15 @@ export default function SignIn() {
         <h2 className="text-3xl font-semibold mb-2 text-gray-900">Sign in</h2>
         <p className="text-gray-500 mb-6">
           Don't have an account?{" "}
-          <Link href="#" className="text-[#2563EB] hover:underline">
-            Create Account
-          </Link>
+          <button 
+            type="button"
+            onClick={() => router.push("/signUp")}
+            className="text-[#0A65CC] hover:underline"
+           >
+            Create an account
+          </button>
+
+
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
