@@ -64,22 +64,21 @@ export default function Transactions() {
           </div>
         </div>
 
-        {/* Mobile Column Headers  */}
         {/* Mobile Column Headers */}
-<div className="grid grid-cols-12 gap-2 mb-2 md:hidden bg-white p-2">
-  <div className="col-span-3 text-left">
-    <span className="font-medium text-gray-600 text-sm">ID</span>
-  </div>
-  <div className="col-span-5 text-left">
-    <span className="font-medium text-gray-600 text-sm">User</span>
-  </div>
-  <div className="col-span-2 text-left">
-    <span className="font-medium text-gray-600 text-sm">Status</span>
-  </div>
-  <div className="col-span-2 text-right">
-    <span className="font-medium text-gray-600 text-sm">Amount</span>
-  </div>
-</div>
+        <div className="grid grid-cols-12 gap-2 mb-2 md:hidden bg-white p-2">
+          <div className="col-span-3 text-left">
+            <span className="font-medium text-gray-600 text-sm">ID</span>
+          </div>
+          <div className="col-span-5 text-left">
+            <span className="font-medium text-gray-600 text-sm">User</span>
+          </div>
+          <div className="col-span-2 text-left">
+            <span className="font-medium text-gray-600 text-sm">Status</span>
+          </div>
+          <div className="col-span-2 text-right">
+            <span className="font-medium text-gray-600 text-sm">Amount</span>
+          </div>
+        </div>
 
         {/* Table Container */}
         <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm mb-6 w-full overflow-x-auto">
@@ -113,38 +112,37 @@ export default function Transactions() {
                 </tbody>
               </table>
               
-  
-{/* Mobile List View - Réorganisation des colonnes */}
-<div className="md:hidden">
-  {currentItems.map((tx, index) => (
-    <div key={tx.id} className={`py-3 ${index !== currentItems.length - 1 ? 'border-b border-gray-100' : ''}`}>
-      <div className="grid grid-cols-12 gap-2">
-        {/* Première colonne avec uniquement l'ID */}
-        <div className="col-span-2 flex flex-col justify-center">
-          <div className="text-xs text-gray-500">{tx.id}</div>
-        </div>
-        
-        {/* Deuxième colonne avec le nom et la date */}
-        <div className="col-span-5 flex flex-col">
-          <div className="font-medium text-gray-800">{tx.name}</div>
-          <div className="text-xs text-gray-500">{tx.date}</div>
-        </div>
-        
-        {/* Statut */}
-        <div className="col-span-3 self-center">
-          <div className={tx.status === "Pending" ? "text-yellow-500" : "text-green-500"}>
-            {tx.status}
-          </div>
-        </div>
-        
-        {/* Montant aligné à droite */}
-        <div className={`col-span-2 text-right self-center ${tx.amount < 0 ? "text-red-500" : "text-green-500"}`}>
-          {tx.amount < 0 ? "-" : ""}${Math.abs(tx.amount).toFixed(2)}
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
+              {/* Mobile List View - Responsive part kept as in your original code */}
+              <div className="md:hidden">
+                {currentItems.map((tx, index) => (
+                  <div key={tx.id} className={`py-3 ${index !== currentItems.length - 1 ? 'border-b border-gray-100' : ''}`}>
+                    <div className="grid grid-cols-12 gap-2">
+                      {/* Première colonne avec uniquement l'ID */}
+                      <div className="col-span-2 flex flex-col justify-center">
+                        <div className="text-xs text-gray-500">{tx.id}</div>
+                      </div>
+                      
+                      {/* Deuxième colonne avec le nom et la date */}
+                      <div className="col-span-5 flex flex-col">
+                        <div className="font-medium text-gray-800">{tx.name}</div>
+                        <div className="text-xs text-gray-500">{tx.date}</div>
+                      </div>
+                      
+                      {/* Statut */}
+                      <div className="col-span-3 self-center">
+                        <div className={tx.status === "Pending" ? "text-yellow-500" : "text-green-500"}>
+                          {tx.status}
+                        </div>
+                      </div>
+                      
+                      {/* Montant aligné à droite */}
+                      <div className={`col-span-2 text-right self-center ${tx.amount < 0 ? "text-red-500" : "text-green-500"}`}>
+                        {tx.amount < 0 ? "-" : ""}${Math.abs(tx.amount).toFixed(2)}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           ) : (
             <div className="py-8 text-center">
@@ -161,34 +159,37 @@ export default function Transactions() {
           </button>
         </div>
 
-        {/* Pagination - Modified with items per page and count on same line, and centered buttons */}
+        {/* Pagination - Modified to have "Items per page" and count on same line in mobile */}
         {filteredTransactions.length > 0 && (
           <div className="flex flex-col md:flex-row justify-between items-center p-4 bg-white shadow-sm rounded-lg gap-4">
-            <div className="flex items-center justify-between w-full md:w-auto">
-              <div className="flex items-center space-x-2">
-                <span className="text-gray-600 text-sm md:text-base">Items per page:</span>
-                <select
-                  className="border px-2 py-1 rounded text-sm md:text-base"
-                  value={itemsPerPage}
-                  onChange={(e) => {
-                    setItemsPerPage(Number(e.target.value));
-                    setCurrentPage(1); // Reset to first page when changing items per page
-                  }}
-                >
-                  <option value={6}>6</option>
-                  <option value={10}>10</option>
-                  <option value={20}>20</option>
-                  <option value={100}>100</option>
-                </select>
+            <div className="flex flex-col md:flex-row justify-between items-center w-full">
+              {/* Modified for mobile: Items per page and count are on the same line */}
+              <div className="flex items-center justify-between w-full md:w-2/3 mb-4 md:mb-0">
+                <div className="flex items-center space-x-2">
+                  <span className="text-gray-600 text-sm md:text-base">Items per page:</span>
+                  <select
+                    className="border px-2 py-1 rounded text-sm md:text-base"
+                    value={itemsPerPage}
+                    onChange={(e) => {
+                      setItemsPerPage(Number(e.target.value));
+                      setCurrentPage(1); // Reset to first page when changing items per page
+                    }}
+                  >
+                    <option value={6}>6</option>
+                    <option value={10}>10</option>
+                    <option value={20}>20</option>
+                    <option value={100}>100</option>
+                  </select>
+                </div>
+                
+                {/* Pagination counter - now inline with Items per page on mobile */}
+                <div className="text-gray-600 text-sm md:text-base">
+                  {`${Math.min((currentPage - 1) * itemsPerPage + 1, filteredTransactions.length)}-${Math.min(currentPage * itemsPerPage, filteredTransactions.length)} of ${filteredTransactions.length}`}
+                </div>
               </div>
-              <div className="text-gray-600 text-sm md:text-base ml-4">
-                {`${Math.min((currentPage - 1) * itemsPerPage + 1, filteredTransactions.length)}-${Math.min(currentPage * itemsPerPage, filteredTransactions.length)} of ${filteredTransactions.length}`}
-              </div>
-            </div>
-            
-            {/* Centered pagination buttons */}
-            <div className="flex justify-center w-full md:w-auto space-x-2 mt-4 md:mt-0">
-              <div className="flex space-x-1">
+              
+              {/* Pagination buttons */}
+              <div className="flex justify-center w-full md:w-1/3 md:justify-end space-x-1">
                 <button
                   className="p-2 border rounded text-gray-400 disabled:opacity-50 flex items-center justify-center w-8 h-8"
                   disabled={currentPage === 1}
