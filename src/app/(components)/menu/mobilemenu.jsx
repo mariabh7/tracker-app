@@ -46,7 +46,7 @@ export default function Mobilemenu() {
       </header>
       {/*  real mobile menu that appear when you click on the phonemenu image  */}
       <div
-        className={`p-5 w-96 bg-baseBlack h-lvh overflow-auto absolute  z-50   text-white right-0 ${
+        className={`p-5 w-80 bg-baseBlack h-lvh overflow-auto absolute  z-50   text-white right-0 ${
           isMenuOpen ? "block" : "hidden"
         }`}
         id="mobileM"
@@ -84,7 +84,7 @@ export default function Mobilemenu() {
             </li>
           ))}
         </ul>
-        <div className=" absolute bottom-0 mb-5 w-80">
+        <div className=" absolute bottom-0 mb-5 w-72 ">
           <div className="settings mt-10 pl-4 pb-5 flex justify-start gap-2 w-full border-b-2 border-neutral-400 ">
             <Image src={settIcon} alt="Settings Icon" width={30} height={30} />
             <a
