@@ -26,7 +26,7 @@ export default function Transactions() {
   const currentItems = filteredTransactions.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <div className="flex md:w-[75%] h-lvh overflow-auto">
+    <div className="flex w-full h-lvh overflow-auto">
       <div className="flex-1 p-4 md:p-6 bg-gray-50 w-full">
         {/* Header with Logo and Menu (mobile) */}
         <div className="flex justify-between items-center mb-12 md:hidden">
