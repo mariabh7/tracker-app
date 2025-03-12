@@ -120,7 +120,7 @@ export default function mycard() {
             </div>
           </div>
           {/* more help div */}
-          <div className=" relative bg-[#F8FAFC] px-3 p-3 border-2 border-b-[#E2E8F0] rounded-md mb-4">
+          <div className="relative bg-[#F8FAFC] px-3 py-3 border-2 border-b-[#E2E8F0] rounded-md mb-4">
             <div className="flex justify-between items-center ">
               <h3 className="capitalize text-2xl font-light text-neutral-900">
                 see our help
@@ -133,7 +133,7 @@ export default function mycard() {
                 {helpYOU.map((q) => (
                   <li
                     key={q.Qes}
-                    className="px-2 cursor-pointer text-xl py-2 font-medium  rounded-sm border-b-2 border-lightGrey "
+                    className="px-2 cursor-pointer text-xl py-2 font-medium rounded-sm border-b-2 border-lightGrey"
                   >
                     <div
                       className={`flex justify-between px-2 border-l-4 py-3 border-l-${q.color}`}
