@@ -23,8 +23,14 @@ module.exports = {
         violet200: '#F7F8FD',
         neutralBlack: '#344055',
         coolGrey: '#79808A',
-      }
-    },
+          deepBlue: '#2236EE',
+        vibBlue: '#0D99C5',
+      },
+      backgroundImage: {
+        texture: "url('/images/Texture.png')",
+      },
+    }
   },
   plugins: [],
 }
+
