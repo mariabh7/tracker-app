@@ -53,9 +53,9 @@ const options = {
 
 const FinanceChart = () => {
   return (
-    <div className="p-10 h-lvh overflow-auto w-full "> 
+    <div className=" h-lvh overflow-auto w-full "> 
       {/* Header */}
-      <div className="mb-20 mt-10">
+      <div className=" px-10 mb-20  mt-20 md:mt-10">
         <h2 className="text-3xl font-bold text-gray-900">Finance Chart</h2>
         <p className="text-lg text-gray-600 mb-4">Keep track of your financial plan</p>
       </div>
@@ -79,7 +79,7 @@ const FinanceChart = () => {
       </div>
 
    {/* Statistic Cards */}
-<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 ">
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-3 px-10  ">
   <div className="p-3 flex items-center bg-white border border-gray-200 rounded-xl shadow-sm">
     <div className="p-2 rounded-lg">
       <Image src={lifeincom} alt="Lifetime Income" width={30} height={30} />
