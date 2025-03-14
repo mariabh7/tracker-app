@@ -64,8 +64,8 @@ export default function mycard() {
               {card.map((cd) => (
                 <div className="mb-2  " key={cd.key}>
                   {/* owner's card info code */}
-                  <div className="w-fit rounded-2xl bg-[#0055ff] ">
-                    <div className="relative w-[330px] md:w-[450px] h-[190px] md:h-[200px] rounded-2xl overflow-hidden">
+                  <div className="relative w-full md:w-[450px] h-[200px] md:h-[200px] rounded-2xl bg-[#0055ff] ">
+                    <div className="overflow-hidden">
                       {/* Gradient Background */}
                       <div className="absolute inset-0 bg-gradient-to-r from-[#658ddd] to-[#91b2ff9f]  mix-blend-multiply"></div>
 
@@ -76,7 +76,7 @@ export default function mycard() {
                         <Image src={backu} width={160} alt="image" />
                       </div>
                       {/* Card owner's name  */}
-                      <span className="absolute bottom-3 left-5 text-white uppercase text-lg font-medium z-20">
+                      <span className="absolute bottom-3 left-5 text-white uppercase text-lg font-medium md:z-20">
                         {cd.name}
                       </span>
                       {/* card payment icon */}
@@ -84,7 +84,7 @@ export default function mycard() {
                         src={payment}
                         width={40}
                         alt="image"
-                        className=" absolute top-0 left-0 z-20 m-4"
+                        className=" absolute top-0 left-0 md:z-20 m-4"
                       />
                     </div>
                   </div>
