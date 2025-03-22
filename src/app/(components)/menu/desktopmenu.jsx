@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import union from "/./public/icons/union.png";
-import hamburgermenu from "/./public/icons/icon button.png";
+import hamburgermenu from "/./public/icons/menui.png";
 import chatIcon from "/./public/icons/chat.png";
 import settIcon from "/./public/icons/cog.png";
 
