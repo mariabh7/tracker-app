@@ -27,7 +27,6 @@ export default function Register() {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
@@ -56,6 +55,11 @@ export default function Register() {
       );
     }
   };
+    // during the absence of the backend this will let the user know that they can't register and login using any kind of accounts
+  // the above function shows how we integrated the sign up with the back . the backend part works locally but we couldn't catch its deployment
+function showWarning() {
+    alert("so sorry to tell you that we failed in deploying the back end part you gotta just press the login button instead and fill the form with any infos to get redirected to mywallet page ! thank you ");
+}
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
       <div className="md:hidden bg-[#0D0D26] flex items-center justify-start py-4 rounded-b-3xl pl-16 h-32 mb-10">
@@ -180,6 +184,7 @@ export default function Register() {
           </div>
 
           <button
+            onclick="showWarning()"
             type="submit"
             className="w-full mt-6 bg-[#0A65CC] text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-800"
           >
