@@ -32,6 +32,7 @@ export default function Register() {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match");
+         router.push("/mywallet");
       return;
     }
 
