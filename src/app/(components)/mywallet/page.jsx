@@ -3,7 +3,7 @@ import Image from "next/image";
 import dots from "/./public/icons/dots.png";
 import requestp from "/./public/icons/requestp.png";
 import sendp from "/./public/icons/sendp.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // wallets icon
 import heart from "/./public/icons/Wallet Icon.png";
 import wallet1 from "/./public/icons/Wallet Icon (1).png";
@@ -86,6 +86,18 @@ export default function Mywallet() {
       alert("something is messing, try again later ");
     }
   };
+  const [userName, setUserName] = useState("User"); // Default name
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Ensure this runs only in the browser
+      const storedName = localStorage.getItem("userName");
+      if (storedName) {
+        setUserName(storedName);
+      }
+    }
+  }, []);
+
   return (
     <div className=" md:w-[100%] h-lvh overflow-y-auto ">
       <div className=" md:px-6  md:py-14">
@@ -109,7 +121,7 @@ export default function Mywallet() {
               <div className="flex justify-between items-center ">
                 <h1 className="capitalize text-2xl md:text-4xl font-semibold ">
                   {" "}
-                  👋 hi <span id="name">aderian</span> !
+                  👋 hi <span id="name">{userName}</span> !
                 </h1>
                 <Image src={dots} alt="3-dots" width={45} />
               </div>
