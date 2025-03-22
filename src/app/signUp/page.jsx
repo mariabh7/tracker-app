@@ -182,15 +182,14 @@ function showWarning() {
               </a>
             </p>
           </div>
-
-          <button
+        </form>
+         <button
             onclick="showWarning()"
             type="submit"
             className="w-full mt-6 bg-[#0A65CC] text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-800"
           >
             Create Account <ArrowRight size={20} />
           </button>
-        </form>
       </div>
     </div>
   );
